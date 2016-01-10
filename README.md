@@ -48,5 +48,5 @@ You'll also need the following electronics:
 * 2 servos modified to function continuously.
 * 2 distance sensors. I used the SunFounder HC-SR04.
 * Optional: A 16x2 LCD screen to display debug information.
-* Batteries, wires, etc.
+* Batteries. I used 4 AA batteries to power the servos and a 9V battery to power the Arduino.
 
