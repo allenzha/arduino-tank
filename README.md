@@ -50,3 +50,8 @@ You'll also need the following electronics:
 * Optional: A 16x2 LCD screen to display debug information.
 * Batteries. I used 4 AA batteries to power the servos and a 9V battery to power the Arduino.
 
+
+## Building the code
+
+I use [inotool](http://inotool.org/) to interface with the Arduino via the command line. `ino build` will compile the code and `ino upload` will put it on the Arduino.
+
