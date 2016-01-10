@@ -18,7 +18,7 @@ Qty | Description                                                            | O
  42 | [Track sections](3d-models/track_plate_8.stl)                          | https://www.thingiverse.com/thing:8559 
   2 | [Drive sprockets](3d-models/drive_sprocket.stl)                        | https://www.thingiverse.com/thing:14599
   4 | [608 idler sprockets](3d-models/608_idler_sprocket.stl)                | https://www.thingiverse.com/thing:14599
-  2 | [Servo mounts](3d-models/servo_mount_2.stl)                            | https://www.thingiverse.com/thing:19170, https://www.thingiverse.com/thing:5165
+  2 | [Servo mounts](3d-models/servo_mount_2.stl)                            | https://www.thingiverse.com/thing:19170 https://www.thingiverse.com/thing:5165
 
 
 ## Required hardware
