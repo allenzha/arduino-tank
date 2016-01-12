@@ -6,7 +6,6 @@ A 3D printed tank that uses an Arduino to do basic obstacle avoidance.
 
 ![arduino tank back](images/tank-back.jpg "arduino tank back")
 
-
 ## Required 3D model files
 
 Note: All of these 3D models were downloaded from https://www.thingiverse.com/thing:19170. Print the following components:
@@ -54,4 +53,9 @@ You'll also need the following electronics:
 ## Building the code
 
 I use [inotool](http://inotool.org/) to interface with the Arduino via the command line. `ino build` will compile the code and `ino upload` will put it on the Arduino.
+
+
+## Introduction video
+
+[![Introduction Video](http://img.youtube.com/vi/t0cPPDxLZmc/0.jpg)](https://www.youtube.com/watch?v=t0cPPDxLZmc)
 
