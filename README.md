@@ -55,7 +55,7 @@ You'll also need the following electronics:
 I use [inotool](http://inotool.org/) to interface with the Arduino via the command line. `ino build` will compile the code and `ino upload` will put it on the Arduino.
 
 
-## Introduction video
+## Video
 
 [![Introduction Video](http://img.youtube.com/vi/t0cPPDxLZmc/0.jpg)](https://www.youtube.com/watch?v=t0cPPDxLZmc)
 
