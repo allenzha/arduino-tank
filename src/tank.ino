@@ -18,15 +18,6 @@
 #include <Servo.h> 
 #include <LiquidCrystal.h> 
 
-/* FIXME
-#define LCD_RS_PIN  8
-#define LCD_EN_PIN  9  
-#define LCD_D4_PIN 10
-#define LCD_D5_PIN 11
-#define LCD_D6_PIN 12
-#define LCD_D7_PIN 13
-*/
-
 #define RIGHT_SENSOR_ECHO_PIN	8
 #define RIGHT_SENSOR_TRIG_PIN	7
 
@@ -48,11 +39,7 @@ int sensorServoPositions[] = { 70, 80, 90, 100, 110, 120, 110, 100, 90, 80 };
 int numSensorServoPositions = 10;
 int currentSensorServoPosition = 0;
 
-//LiquidCrystal lcd(LCD_RS_PIN, LCD_EN_PIN, LCD_D4_PIN, LCD_D5_PIN, LCD_D6_PIN, LCD_D7_PIN);
-
 void setup() {
- // lcd.begin(16, 2);
-
   Serial.begin(9600);
 
   leftServo.attach(LEFT_SERVO_PIN);
@@ -94,31 +81,25 @@ void loop()
   long rightDistanceCm = measureUltrasonicDistance(RIGHT_SENSOR_TRIG_PIN, RIGHT_SENSOR_ECHO_PIN);
   long leftDistanceCm = measureUltrasonicDistance(LEFT_SENSOR_TRIG_PIN, LEFT_SENSOR_ECHO_PIN);
 
-  int ifBlock;
   if (leftDistanceCm < CLOSEST_DISTANCE_CM and rightDistanceCm < CLOSEST_DISTANCE_CM) {
     if(leftDistanceCm < rightDistanceCm) {
-      ifBlock = 1;
       leftServoPosition = 0;
       rightServoPosition = 0;
     }
     else {
-      ifBlock = 2;
       leftServoPosition = 180;
       rightServoPosition = 180;
     }
   }
   else if (leftDistanceCm < CLOSEST_DISTANCE_CM) {
-    ifBlock = 3;
     leftServoPosition = 180;
     rightServoPosition = 180;
   }
   else if (rightDistanceCm < CLOSEST_DISTANCE_CM) {
-    ifBlock = 4;
     leftServoPosition = 0;
     rightServoPosition = 0;
   }
   else {
-    ifBlock = 5;
     leftServoPosition = 180;
     rightServoPosition = 0;
   }
@@ -126,16 +107,12 @@ void loop()
   leftServo.write(leftServoPosition);
   rightServo.write(rightServoPosition);
 
-  snprintf(buf, sizeof(buf), "%d: L:%ld R:%ld        ", ifBlock, leftDistanceCm, rightDistanceCm);
+  snprintf(buf, sizeof(buf), "D: L:%ld R:%ld        ", leftDistanceCm, rightDistanceCm);
   Serial.print(buf);
   Serial.print(" ");
-//  lcd.setCursor(0, 0);
-//  lcd.print(buf);
 
   snprintf(buf, sizeof(buf), "S: L:%d R:%d        ", leftServoPosition, rightServoPosition);
   Serial.println(buf);
-//  lcd.setCursor(0, 1);
-//  lcd.print(buf);
 
   delay(50);
 }
