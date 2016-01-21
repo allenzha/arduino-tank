@@ -37,7 +37,7 @@ Servo sensorServo;
 
 int sensorServoPositions[] = { 70, 80, 90, 100, 110, 120, 110, 100, 90, 80 };
 int numSensorServoPositions = 10;
-int currentSensorServoPosition = 0;
+int currentSensorServoPosIndex = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -72,8 +72,8 @@ void loop()
 {
   char buf[25];
 
-  sensorServo.write(sensorServoPositions[currentSensorServoPosition]);
-  currentSensorServoPosition = (currentSensorServoPosition + 1) % numSensorServoPositions;
+  sensorServo.write(sensorServoPositions[currentSensorServoPosIndex]);
+  currentSensorServoPosIndex = (currentSensorServoPosIndex + 1) % numSensorServoPositions;
 
   int leftServoPosition;
   int rightServoPosition;
