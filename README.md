@@ -46,7 +46,8 @@ Qty | Description                    | For Component
 You'll also need the following electronics:
 
 * A micro controller. I used an Arduino Uno.
-* 2 servos modified to function continuously.
+* 2 servos modified to function continuously for the drive trail.
+* 1 normal servo for the distance sensor mount.
 * 2 distance sensors. I used the SunFounder HC-SR04.
 * Optional: A 16x2 LCD screen to display debug information.
 * Batteries. I used 4 AAA batteries to power the servos and a 9V battery to power the Arduino.
